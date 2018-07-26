@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import './font.css'
+import './aboutTile.scss'
 
 const ms = require('simple-modular-scale')
 
@@ -27,44 +28,23 @@ const AboutTile = ({ siteTitle }) => (
       height: '100vh',
     }}
   >
-    <div
+    <h1>Lighthouse &amp; Giant</h1>
+    <p>
+      Back in 2010 we started a psuedo agency, something to pour our creativity
+      into to try and help build brands. We've worked with mostly startups but
+      we like to think we've helped them on their way to become the mature
+      brands they are today, head held high. Fast forward to 2017 and we've
+      joined an real life agency.<br />This is where you can now find us.
+    </p>
+    <Link
       style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100vw',
-        fontFamily: 'bagnard_regularregular',
-        fontSize: scale[0],
-        textAlign: 'center',
+        textDecoration: 'none',
+        fontSize: scale[2],
       }}
+      to="/"
     >
-      <h1>Lighthouse &amp; Giant</h1>
-      <p
-        style={{
-          fontSize: scale[0],
-          lineHeight: scale[2] + 'px',
-          marginBottom: scale[4],
-          maxWidth: '500px',
-        }}
-      >
-        Back in 2010 we started a psuedo agency, something to pour our
-        creativity into to try and help build brands. We've worked with mostly
-        startups but we like to think we've helped them on their way to become
-        the mature brands they are today, head held high. Fast forward to 2017
-        and we've joined an real life agency.<br />This is where you can now
-        find us.
-      </p>
-      <Link
-        style={{
-          textDecoration: 'none',
-          fontSize: scale[2],
-        }}
-        to="/"
-      >
-        &times;
-      </Link>
-    </div>
+      &times;
+    </Link>
   </section>
 )
 
