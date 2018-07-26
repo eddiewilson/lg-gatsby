@@ -2,5 +2,15 @@ module.exports = {
   siteMetadata: {
     title: 'Lighthouse & Giant',
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-react-helmet`,
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        precision: 8,
+      },
+    },
+  ],
 }

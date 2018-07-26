@@ -13,6 +13,7 @@ const scale = ms({
 
 const AboutTile = ({ siteTitle }) => (
   <section
+    className="about"
     style={{
       marginBottom: scale[1],
       paddingTop: scale[0],
@@ -38,15 +39,7 @@ const AboutTile = ({ siteTitle }) => (
         textAlign: 'center',
       }}
     >
-      <h1
-        style={{
-          fontSize: scale[4],
-          lineHeight: scale[3] + 'px',
-          marginBottom: scale[4],
-        }}
-      >
-        Lighthouse &amp; Giant
-      </h1>
+      <h1>Lighthouse &amp; Giant</h1>
       <p
         style={{
           fontSize: scale[0],

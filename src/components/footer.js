@@ -57,7 +57,7 @@ const Footer = ({ siteTitle }) => (
           marginBottom: '0',
         }}
       >
-        &copy; 2006 - {getYear}
+        &copy; 2010 - {getYear}
       </p>
     </div>
   </footer>
