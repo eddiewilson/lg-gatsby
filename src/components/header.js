@@ -14,36 +14,55 @@ const scale = ms({
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      marginBottom: scale[1],
-      paddingTop: scale[0],
-      paddingBottom: '1.45rem',
+      paddingTop: scale[3],
+      paddingBottom: scale[1],
+      display: 'flex',
+      justifySelf: 'flex-end',
+      flexDirection: 'row',
       position: 'fixed',
-      zIndex: '9999999999',
+      top: '0',
+      left: '0',
+      right: '0',
+      paddingLeft: scale[4],
+      paddingRight: scale[4],
+      justifyContent: 'space-between',
     }}
   >
     <div
       style={{
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         width: '100vw',
       }}
     >
-      <h1 style={{}}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-            backgroundImage: 'url(' + Bolster + ')',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '48px',
-            width: '48px',
-            height: '48px',
-            backgroundRepeat: 'no-repeat',
-            display: 'block',
-          }}
-        />
+      <Link
+        to="/"
+        style={{
+          color: 'white',
+          textDecoration: 'none',
+          backgroundImage: 'url(' + Bolster + ')',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '48px',
+          width: '48px',
+          height: '48px',
+          backgroundRepeat: 'no-repeat',
+          display: 'block',
+        }}
+      />
+      <h1
+        style={{
+          color: '#111111',
+          textDecoration: 'none',
+          display: 'flex',
+          fontFamily: 'bagnard_regularregular',
+          fontSize: scale[0],
+          textTransform: 'uppercase',
+          letterSpacing: '1px',
+          alignSelf: 'flex-start',
+        }}
+      >
+        L&amp;G
       </h1>
     </div>
   </header>

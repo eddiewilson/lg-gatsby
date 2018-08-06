@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import './font.css'
+import './footer.scss'
 
 const ms = require('simple-modular-scale')
 
@@ -30,18 +31,14 @@ const Footer = ({ siteTitle }) => (
       justifyContent: 'space-between',
     }}
   >
-    <div className="" style={{ display: 'flex', alignSelf: 'flex-end' }}>
+    <div
+      className="footer-wrapper"
+      style={{ display: 'flex', alignSelf: 'flex-end' }}
+    >
       <Link
         to="/about"
         style={{
-          color: '#111111',
           textDecoration: 'none',
-          display: 'flex',
-          fontFamily: 'bagnard_regularregular',
-          fontSize: scale[0],
-          textTransform: 'uppercase',
-          letterSpacing: '1px',
-          alignSelf: 'flex-start',
         }}
       >
         Wtf

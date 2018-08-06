@@ -4,6 +4,7 @@ import './slider.css'
 
 import CutByBeam from '../components/images/slider/lg-cutbybeam.svg'
 import ApplyWorks from '../components/images/slider/lg-applyworks03.png'
+import Redgrave from '../components/images/slider/lg-redgrave.png'
 
 const pages = [
   style => (
@@ -22,6 +23,14 @@ const pages = [
       style={{
         ...style,
         backgroundImage: `url(${ApplyWorks})`,
+      }}
+    />
+  ),
+  style => (
+    <animated.div
+      style={{
+        ...style,
+        backgroundImage: `url(${Redgrave})`,
         backgroundSize: '880, 548',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -33,7 +42,7 @@ const pages = [
 class HomeSlider extends React.PureComponent {
   state = { index: 0 }
   toggle = e =>
-    this.setState(state => ({ index: state.index === 1 ? 0 : state.index + 1 }))
+    this.setState(state => ({ index: state.index === 2 ? 0 : state.index + 1 }))
   render() {
     return (
       <div className="main" onClick={this.toggle}>
