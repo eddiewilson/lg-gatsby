@@ -3,8 +3,15 @@ import { Transition, animated } from 'react-spring'
 import './slider.css'
 
 import CutByBeam from '../components/images/slider/lg-cutbybeam.svg'
-import ApplyWorks from '../components/images/slider/lg-applyworks03.png'
 import Redgrave from '../components/images/slider/lg-redgrave.png'
+import ApplyWorks from '../components/images/slider/lg-applyworks.png'
+import Apperley from '../components/images/slider/lg-apperley.jpg'
+import Clays from '../components/images/slider/lg-clays.jpg'
+import ClaysTshirt from '../components/images/slider/lg-clays-tshirt.jpg'
+import ClaysFlyer from '../components/images/slider/lg-clays-flyer.jpg'
+import SkinflintFlyer from '../components/images/slider/lg-skinflint-flyer.jpg'
+import CutByBeamIcons from '../components/images/slider/lg-cut-by-beam-icons.jpg'
+import SkinflintBox from '../components/images/slider/lg-skinflint-box.jpg'
 
 const pages = [
   style => (
@@ -37,12 +44,68 @@ const pages = [
       }}
     />
   ),
+  style => (
+    <animated.div
+      style={{
+        ...style,
+        backgroundImage: `url(${Apperley})`,
+      }}
+    />
+  ),
+  style => (
+    <animated.div
+      style={{
+        ...style,
+        backgroundImage: `url(${Clays})`,
+      }}
+    />
+  ),
+  style => (
+    <animated.div
+      style={{
+        ...style,
+        backgroundImage: `url(${ClaysTshirt})`,
+      }}
+    />
+  ),
+  style => (
+    <animated.div
+      style={{
+        ...style,
+        backgroundImage: `url(${ClaysFlyer})`,
+      }}
+    />
+  ),
+  style => (
+    <animated.div
+      style={{
+        ...style,
+        backgroundImage: `url(${SkinflintFlyer})`,
+      }}
+    />
+  ),
+  style => (
+    <animated.div
+      style={{
+        ...style,
+        backgroundImage: `url(${CutByBeamIcons})`,
+      }}
+    />
+  ),
+  style => (
+    <animated.div
+      style={{
+        ...style,
+        backgroundImage: `url(${SkinflintBox})`,
+      }}
+    />
+  ),
 ]
 
 class HomeSlider extends React.PureComponent {
   state = { index: 0 }
   toggle = e =>
-    this.setState(state => ({ index: state.index === 2 ? 0 : state.index + 1 }))
+    this.setState(state => ({ index: state.index === 9 ? 0 : state.index + 1 }))
   render() {
     return (
       <div className="main" onClick={this.toggle}>
