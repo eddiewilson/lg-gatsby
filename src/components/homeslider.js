@@ -1,6 +1,6 @@
 import React from 'react'
 import { Transition, animated } from 'react-spring'
-import './slider.css'
+import './slider.scss'
 
 import CutByBeam from '../components/images/slider/lg-cutbybeam.svg'
 import Redgrave from '../components/images/slider/lg-redgrave.png'
