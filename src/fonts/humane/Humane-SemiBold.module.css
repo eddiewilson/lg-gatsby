@@ -1,0 +1,12 @@
+/* Webfont: Humane-SemiBold */
+
+@font-face {
+  font-family: 'Humane-SemiBold';
+  src:
+    url('Humane-SemiBold.woff') format('woff'),
+    url('Humane-SemiBold.woff2') format('woff2'),
+    url('Humane-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}

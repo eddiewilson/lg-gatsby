@@ -1,0 +1,13 @@
+/* Webfont: Humane-Regular */
+
+@font-face {
+  font-family: 'Humane-Regular';
+  src:
+    /* IE6-IE8 */
+    url('Humane-Regular.woff') format('woff'),
+    /* Modern Browsers */ url('Humane-Regular.woff2') format('woff2'),
+    /* Modern Browsers */ url('Humane-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}

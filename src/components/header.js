@@ -1,71 +1,87 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Bolster from '../components/bolster.svg'
+import { motion } from 'framer-motion'
 
-const ms = require('simple-modular-scale')
+export const Header = ({ siteTitle }) => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        staggerChildren: 0.3,
+      },
+    },
+  }
 
-const scale = ms({
-  base: 16,
-  ratios: [3 / 2, 4 / 3],
-  length: 8,
-})
-// [ 16, 24, 32, 48, 64, 96, 128, 192 ]
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  }
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      paddingTop: scale[3],
-      paddingBottom: scale[1],
-      display: 'flex',
-      justifySelf: 'flex-end',
-      flexDirection: 'row',
-      position: 'fixed',
-      top: '0',
-      left: '0',
-      right: '0',
-      paddingLeft: scale[4],
-      paddingRight: scale[4],
-      justifyContent: 'space-between',
-    }}
-  >
-    <div
+  return (
+    <header
       style={{
+        paddingTop: '1rem',
+        paddingBottom: '1rem',
+        paddingLeft: '2rem',
+        paddingRight: '2rem',
         display: 'flex',
+        justifySelf: 'flex-end',
+        flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center',
-        width: '100vw',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
       }}
     >
-      <Link
-        to="/"
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
         style={{
-          color: 'white',
-          textDecoration: 'none',
-          backgroundImage: 'url(' + Bolster + ')',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '48px',
-          width: '48px',
-          height: '48px',
-          backgroundRepeat: 'no-repeat',
-          display: 'block',
-        }}
-      />
-      <h1
-        style={{
-          color: '#111111',
-          textDecoration: 'none',
           display: 'flex',
-          fontFamily: 'bagnard_regularregular',
-          fontSize: scale[0],
-          textTransform: 'uppercase',
-          letterSpacing: '1px',
-          alignSelf: 'flex-start',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: '100vw',
         }}
       >
-        L&amp;G
-      </h1>
-    </div>
-  </header>
-)
+        <motion.div variants={item}>
+          <Link
+            to="/"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              backgroundImage: 'url(' + Bolster + ')',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '48px',
+              width: '48px',
+              height: '48px',
+              backgroundRepeat: 'no-repeat',
+              display: 'block',
+            }}
+          />
+        </motion.div>
 
-export default Header
+        <motion.div variants={item}>
+          <h1
+            style={{
+              color: '#111111',
+              textDecoration: 'none',
+              display: 'flex',
+              fontFamily: 'Humane-Light',
+              fontSize: '2rem',
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+              alignSelf: 'flex-start',
+            }}
+          >
+            Lighthouse &amp; Giant
+          </h1>
+        </motion.div>
+      </motion.div>
+    </header>
+  )
+}

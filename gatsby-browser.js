@@ -1,7 +1,5 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
- // You can delete this file if you're not using it
+import * as humaneRegular from './src/fonts/humane/Humane-Regular.module.css'
+import * as humaneSemiBold from './src/fonts/humane/Humane-SemiBold.module.css'
+import * as humaneLight from './src/fonts/humane/Humane-Light.module.css'
+import * as nohemiRegular from './src/fonts/nohemi/Nohemi-Regular.module.css'
+import * as index from './src/pages/index.module.css'
