@@ -59,7 +59,6 @@ export const Header = ({ siteTitle }) => {
               backgroundSize: '48px',
               width: '48px',
               height: '48px',
-              backgroundRepeat: 'no-repeat',
               display: 'block',
             }}
           />

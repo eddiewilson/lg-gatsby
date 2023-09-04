@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-http://fervent-hypatia-0558f2.netlify.com/* http://lighthouseandgiant.co.uk/:splat 301!

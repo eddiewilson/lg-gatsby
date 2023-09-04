@@ -20,7 +20,10 @@ export const HomeSlider = ({ allFile }) => {
         justifyContent: 'center',
         height: '100vh',
       }}
+      onKeyDown={(e) => toggle()}
       onClick={(e) => toggle()}
+      role="region"
+      aria-label="Carousel"
     >
       {allFile.nodes[page.index] && (
         <motion.div
