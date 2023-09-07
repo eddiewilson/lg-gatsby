@@ -1,3 +1,9 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`,
+})
+
+console.log('Tumblr Consumer Key', process.env.TUMBLR_CONSUMER_KEY)
+
 module.exports = {
   siteMetadata: {
     title: 'Lighthouse & Giant',
@@ -25,6 +31,13 @@ module.exports = {
         name: `images`,
         // Path to the directory
         path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-tumblr`,
+      options: {
+        blogIdentifier: `lighthousegiant`,
+        consumerKey: process.env.TUMBLR_CONSUMER_KEY,
       },
     },
   ],
