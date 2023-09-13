@@ -1,11 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Header } from '../components/header'
-import { Footer } from '../components/footer'
-// import '../layouts/index.css'
+import { Layout } from '../components/layout'
 import { HomeSlider } from '../components/homeslider'
 
-const IndexPage = ({ children, data }) => {
+const IndexPage = ({ children, data, location }) => {
   return (
     <div
       style={{
@@ -29,22 +27,15 @@ const IndexPage = ({ children, data }) => {
         },
       ]}
     /> */}
-      <Header siteTitle={data.site.siteMetadata.title} />
-
-      <HomeSlider allFile={data.allFile} />
-
-      <Footer />
+      <Layout location={location}>
+        <HomeSlider allFile={data.allFile} />
+      </Layout>
     </div>
   )
 }
 
 export const query = graphql`
   query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allFile {
       ...CarouselQuery
     }

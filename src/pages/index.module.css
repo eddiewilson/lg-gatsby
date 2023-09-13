@@ -512,3 +512,20 @@ pre tt:after {
     font-size: 100%;
   }
 }
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Satoshi-Variable';
+}
+h1 {
+  color: #111111;
+  font-family: 'Satoshi-Variable';
+  font-size: 12rem;
+}
+h2 {
+  color: #111111;
+  font-family: 'Satoshi-Variable';
+  font-size: 2rem;
+  line-height: 2.3rem;
+  font-weight: 900;
+}
