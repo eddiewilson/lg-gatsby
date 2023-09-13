@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 
-const getYear = new Date().getFullYear()
+// const getYear = new Date().getFullYear()
 
-export const Footer = ({ siteTitle }) => {
+export const Footer = (props) => {
+  const { location } = props
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -48,14 +49,14 @@ export const Footer = ({ siteTitle }) => {
         <Link
           to="/about"
           style={{
-            fontFamily: 'Humane-Regular',
-            textTransform: 'uppercase',
-            fontSize: '2rem',
+            fontFamily: 'Satoshi-Variable',
+            fontWeight: 600,
+            fontSize: '1rem',
             textDecoration: 'none',
             color: 'inherit',
           }}
         >
-          Wtf
+          wtf
         </Link>
       </motion.div>
       <motion.div
@@ -63,17 +64,34 @@ export const Footer = ({ siteTitle }) => {
         className=""
         style={{ display: 'flex', alignSelf: 'flex-end' }}
       >
-        <p
+        {/* <p
           style={{
-            fontFamily: 'Humane-Regular',
-            fontSize: '2rem',
+            fontFamily: 'Satoshi-Variable',
+            fontWeight: 600,
             textTransform: 'uppercase',
             letterSpacing: '1px',
+            fontSize: '1rem',
             marginBottom: '0',
           }}
         >
           &copy; 2010 - {getYear}
-        </p>
+        </p> */}
+        <Link
+          to="/journal"
+          disabled={
+            location && location.pathname === '/journal/' ? true : false
+          }
+          activeStyle={{ color: '#909090' }}
+          style={{
+            fontFamily: 'Satoshi-Variable',
+            fontWeight: 600,
+            fontSize: '1rem',
+            textDecoration: 'none',
+            color: 'inherit',
+          }}
+        >
+          Journal
+        </Link>
       </motion.div>
     </motion.footer>
   )

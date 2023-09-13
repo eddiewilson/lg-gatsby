@@ -1,7 +1,31 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+// import { createNodeHelpers } from 'gatsby-node-helpers'
 
- // You can delete this file if you're not using it
+// import { createClient, fetchAll } from './fetch'
+
+// const { createNodeFactory } = createNodeHelpers({ typePrefix: `Tumblr` })
+
+// const PostNode = createNodeFactory(`Post`)
+
+// console.log('Hello Tumblr')
+
+// export async function sourceNodes({
+//   actions,
+//   createNodeId,
+//   createContentDigest,
+// }) {
+//   const blogIdentifier = `${process.env.TUMBLR_CONSUMER_KEY}`
+//   const consumerKey = `lighthouseandgiant`
+//   const client = createClient({ blogIdentifier, consumerKey })
+
+//   const posts = await fetchAll(client, `posts`)
+
+//   actions.createNode({
+//     ...posts,
+//     id: createNodeId(data.date),
+//     internal: {
+//       type: 'apod',
+//       contentDigest: createContentDigest(data),
+//     },
+//   })
+//   // actions.createNode(PostNode(post)))
+// }

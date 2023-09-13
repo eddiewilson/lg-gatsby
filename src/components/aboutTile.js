@@ -49,10 +49,11 @@ const AboutTile = ({ siteTitle }) => {
         <motion.div variants={item}>
           <h1
             style={{
-              fontFamily: 'Humane-SemiBold',
-              fontSize: '4rem',
-              textTransform: 'uppercase',
-              letterSpacing: '1px',
+              color: '#111111',
+              fontFamily: 'Satoshi-Variable',
+              fontSize: '3rem',
+              marginBottom: '4rem',
+              lineHeight: '3rem',
             }}
           >
             Lighthouse &amp; Giant
@@ -62,7 +63,7 @@ const AboutTile = ({ siteTitle }) => {
           <p
             style={{
               marginBottom: '1rem',
-              fontFamily: 'Nohemi-Regular',
+              fontFamily: 'Satoshi-Variable',
               fontSize: '1rem',
               lineHeight: 1.8,
             }}

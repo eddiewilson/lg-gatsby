@@ -2,8 +2,20 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Bolster from '../components/bolster.svg'
 import { motion } from 'framer-motion'
+import { useStaticQuery, graphql } from 'gatsby'
 
-export const Header = ({ siteTitle }) => {
+export const Header = (props) => {
+  const { location } = props
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -32,6 +44,7 @@ export const Header = ({ siteTitle }) => {
         flexDirection: 'row',
         justifyContent: 'space-between',
         position: 'fixed',
+        zIndex: 10,
         top: 0,
         left: 0,
         right: 0,
@@ -70,14 +83,13 @@ export const Header = ({ siteTitle }) => {
               color: '#111111',
               textDecoration: 'none',
               display: 'flex',
-              fontFamily: 'Humane-Light',
-              fontSize: '2rem',
-              textTransform: 'uppercase',
-              letterSpacing: '1px',
+              fontFamily: 'Satoshi-Variable',
+              fontSize: '1rem',
               alignSelf: 'flex-start',
+              textTransform: 'capitalize',
             }}
           >
-            Lighthouse &amp; Giant
+            Lighthouse &amp; Giant {location && location.pathname.slice(1, -1)}
           </h1>
         </motion.div>
       </motion.div>
